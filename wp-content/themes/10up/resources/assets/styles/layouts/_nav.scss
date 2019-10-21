@@ -1,0 +1,127 @@
+
+/* nav */
+
+#nav {
+  background: $blue;
+  position: relative;
+  margin: 0 auto;
+
+  li {
+    /* open / expanded */
+    &.mm-toggle {
+      width: 62px;
+      height: 67px;
+      position: absolute;
+      top: -67px;
+      background: $blue;
+      transition-duration: 0.5s;
+
+      span {
+        float: left;
+        background-color: $white;
+        -webkit-mask: url(/10up/wp-content/uploads/2019/10/close.svg) no-repeat 50% 50%;
+        mask: url(/10up/wp-content/uploads/2019/10/close.svg) no-repeat 50% 50%;
+        display: block;
+        cursor: pointer;
+        text-align: left;
+        text-indent: -9999px;
+        width: 24px;
+        height: 24px;
+        margin: 20px;
+        position: relative;
+        left: 0;
+        top: 0;
+        transition: all 0.4s ease-in-out;
+      }
+    }
+  }
+
+  .menu-nav-container {
+    margin: 0 auto 0;
+    transition-duration: 0.5s;
+    animation: fadeIn ease 0.5s;
+    background: $blue;
+
+    @include respond-to("small") {
+      transition-duration: 0;
+      animation: none;
+      clear: both;
+      margin: 0;
+    }
+
+    #menu-nav {
+      max-width: 1170px;
+      margin: 0 auto;
+
+      li {
+        display: block;
+        border-bottom: 1px solid $white;
+
+        @include respond-to("small") {
+          border: none;
+          display: inline;
+        }
+
+        a {
+          padding: 20px;
+          color: $white;
+          display: block;
+
+          &:hover {
+            transition-duration: 0.4s;
+            background: $dark-blue;
+            color: $yellow;
+          }
+
+          @include respond-to("small") {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  &.mm-hide {
+    @include respond-to("small") {
+      display: inline;
+    }
+
+    .mm-toggle {
+      display: block;
+      background: none;
+      top: -65px;
+
+      @include respond-to("small") {
+        display: none;
+      }
+
+      span {
+        float: left;
+        background-color: $white;
+        -webkit-mask: url(/10up/wp-content/uploads/2019/10/menu.svg) no-repeat 50% 50%;
+        mask: url(/10up/wp-content/uploads/2019/10/menu.svg) no-repeat 50% 50%;
+        display: block;
+        cursor: pointer;
+        text-align: left;
+        text-indent: -9999px;
+        width: 24px;
+        height: 24px;
+        margin: 20px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: all 0.4s ease-in-out;
+        transform: translateY(0) rotate(-180deg);
+      }
+    }
+
+    .menu-nav-container {
+      display: none;
+
+      @include respond-to("small") {
+        display: inline-block;
+        width: 100%;
+      }
+    }
+  }
+}

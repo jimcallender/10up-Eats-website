@@ -1,0 +1,109 @@
+/* search */
+
+#searchwrap {
+  float: right;
+  position: relative;
+  margin-top: -61px;
+  width: 100%;
+
+  @include respond-to("small") {
+    margin-top: inherit;
+    width: auto;
+  }
+
+  .search {
+    float: right;
+    margin-top: -7px;
+    margin-right: 20px;
+
+    @include respond-to("small") {
+      margin-top: auto;
+    }
+
+    &:hover {
+      background: $blue;
+    }
+
+    button {
+      background-color: $white;
+      cursor: pointer;
+      -webkit-mask: url(/10up/wp-content/uploads/2019/10/search.svg) no-repeat 50% 50%;
+      mask: url(/10up/wp-content/uploads/2019/10/search.svg) no-repeat 50% 50%;
+      width: 14px;
+      padding: 25px 30px;
+      text-indent: -9999em;
+      margin-top: 0;
+
+      @include respond-to("small") {
+        padding: 19px 30px;
+        margin-top: 4px;
+      }
+
+      &:hover {
+        transition-duration: 0.5s;
+        background-color: $white;
+        -webkit-mask: url(/10up/wp-content/uploads/2019/10/close.svg) no-repeat 50% 50%;
+        mask: url(/10up/wp-content/uploads/2019/10/close.svg) no-repeat 50% 50%;
+      }
+    }
+  }
+
+  #formwrap {
+    position: relative;
+    right: 0;
+    bottom: -60px;
+    padding: 20px;
+    background: $blue;
+    z-index: 999;
+    display: none;
+    margin-bottom: 85px;
+
+    @include respond-to("small") {
+      bottom: -96px;
+      position: absolute;
+      width: 325px;
+      right: 20px;
+      margin-bottom: auto;
+    }
+
+    form {
+      background: $white;
+
+      @include respond-to("xsmall") {
+        width: 95%;
+      }
+
+      @include respond-to("small") {
+        width: inherit;
+      }
+
+      #s {
+        padding: 15px 0 15px 15px;
+        color: $dark-gray;
+        font-size: 80%;
+        border: 0;
+
+        @include respond-to("small") {
+          width: 255px;
+        }
+      }
+
+      #searchsubmit {
+        border: none;
+        background-color: $dark-gray;
+        -webkit-mask: url(/10up/wp-content/uploads/2019/10/search.svg) no-repeat 50% 50%;
+        mask: url(/10up/wp-content/uploads/2019/10/search.svg) no-repeat 50% 50%;
+        width: 14px;
+        padding: 13px;
+        text-indent: -9999em;
+        position: absolute;
+        right: 45px;
+        top: 25px;
+
+        @include respond-to("small") {
+          right: 25px;
+        }
+      }
+    }
+  }
+}
