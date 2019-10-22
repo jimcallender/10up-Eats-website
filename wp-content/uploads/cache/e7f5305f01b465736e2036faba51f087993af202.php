@@ -4,9 +4,9 @@
     <a class="brand" href="<?php echo e(home_url('/')); ?>">
       <h1><span><?php echo e(get_bloginfo('name', 'display')); ?></span></h1>
     </a>
-    
+
 <div id="searchwrap">
-  <div class="search"><button>Try it</button></div>
+  <div class="search"><button>search</button></div>
     <div id="formwrap">
       <?php echo $__env->make('partials/search', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
     </div>

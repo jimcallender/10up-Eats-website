@@ -25,23 +25,25 @@
     }
 
     button {
-      background-color: $white;
       cursor: pointer;
+      background: $white;
       -webkit-mask: url(/10up/wp-content/uploads/2019/10/search.svg) no-repeat 50% 50%;
       mask: url(/10up/wp-content/uploads/2019/10/search.svg) no-repeat 50% 50%;
       width: 14px;
-      padding: 25px 30px;
+      padding: 27px 30px;
       text-indent: -9999em;
       margin-top: 0;
+      border: 0;
 
       @include respond-to("small") {
-        padding: 19px 30px;
+        padding: 21px 30px;
         margin-top: 4px;
+        background: $white;
       }
 
       &:hover {
         transition-duration: 0.5s;
-        background-color: $white;
+        background: $white;
         -webkit-mask: url(/10up/wp-content/uploads/2019/10/close.svg) no-repeat 50% 50%;
         mask: url(/10up/wp-content/uploads/2019/10/close.svg) no-repeat 50% 50%;
       }
@@ -69,10 +71,6 @@
     form {
       background: $white;
 
-      @include respond-to("xsmall") {
-        width: 95%;
-      }
-
       @include respond-to("small") {
         width: inherit;
       }
@@ -98,7 +96,7 @@
         text-indent: -9999em;
         position: absolute;
         right: 45px;
-        top: 25px;
+        top: 25%;
 
         @include respond-to("small") {
           right: 25px;

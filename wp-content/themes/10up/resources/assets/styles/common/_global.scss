@@ -131,6 +131,7 @@ body {
   color: $black;
   font-family: "Raleway", arial, sans-serif;
   min-width: 320px;
+  overflow-x: hidden;
 }
 
 .wrap {
@@ -182,11 +183,12 @@ body {
         color: $orange;
 
         &::after {
-          background: $orange;
           content: "";
-          mask: url(http://localhost:3000/10up/wp-content/uploads/2019/10/cheveron-right.svg) 0 0 no-repeat;
+          -webkit-mask: url(/10up/wp-content/uploads/2019/10/cheveron-right.svg) 0 0 no-repeat;
+          mask: url(/10up/wp-content/uploads/2019/10/cheveron-right.svg) 0 0 no-repeat;
           mask-size: 26px 25px;
           padding: 2px 11px;
+          background: $orange;
         }
       }
     }

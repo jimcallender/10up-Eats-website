@@ -51,9 +51,10 @@ header {
             }
 
             &::before {
-              background: $white;
               content: "";
-              mask: url(http://localhost:3000/10up/wp-content/uploads/2019/10/logo.svg) 0 0 no-repeat;
+              background: $white;
+              -webkit-mask: url(/10up/wp-content/uploads/2019/10/logo.svg) 0 0 no-repeat;
+              mask: url(/10up/wp-content/uploads/2019/10/logo.svg) 0 0 no-repeat;
               mask-size: 44px 37px;
               padding: 7px 28px 10px 28px;
 

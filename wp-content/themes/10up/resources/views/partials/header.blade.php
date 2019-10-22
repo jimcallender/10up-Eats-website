@@ -4,9 +4,9 @@
     <a class="brand" href="{{ home_url('/') }}">
       <h1><span>{{ get_bloginfo('name', 'display') }}</span></h1>
     </a>
-    
+
 <div id="searchwrap">
-  <div class="search"><button>Try it</button></div>
+  <div class="search"><button>search</button></div>
     <div id="formwrap">
       @include('partials/search')
     </div>

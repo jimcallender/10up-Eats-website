@@ -89,14 +89,3 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
-
-/**
- * include custom jQuery for search
- */
-function search_jquery() {
-
-	wp_deregister_script('jquery');
-	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), null, true);
-
-}
-add_action('wp_enqueue_scripts', 'search_jquery');
